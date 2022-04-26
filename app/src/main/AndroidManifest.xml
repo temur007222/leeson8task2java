@@ -9,19 +9,32 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Leeson8task2java">
+
         <activity
             android:name=".Activities.MainActivity"
             android:exported="true">
             <intent-filter>
-
+                <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
         <activity
-            android:name=".Activities.FragmentActivity"/>
+            android:name=".Activities.FragmentActivity"
+            android:exported="true">
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
         <activity
-            android:name=".Activities.RunTimeActivity"/>
+            android:name=".Activities.RunTimeActivity"
+            android:exported="true">
+            <intent-filter>
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
 
     </application>
 
