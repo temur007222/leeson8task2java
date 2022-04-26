@@ -7,7 +7,10 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.leeson8task2java.Fragments.FirstFragment;
 import com.example.leeson8task2java.Fragments.SecondFragment;
+import com.example.leeson8task2java.Models.User;
 import com.example.leeson8task2java.R;
+
+import java.util.ArrayList;
 
 public class RunTimeActivity extends AppCompatActivity implements FirstFragment.FirstListener, SecondFragment.SecondListener {
 
@@ -22,13 +25,13 @@ public class RunTimeActivity extends AppCompatActivity implements FirstFragment.
     }
 
     @Override
-    public void onFirstSend(String str) {
-        secondFragment.updateSecondText(str);
+    public void onFirstSend(ArrayList<User> list) {
+        secondFragment.updateSecondText(list);
     }
 
     @Override
-    public void onSecondSend(String str) {
-        firstFragment.updateFirstText(str);
+    public void onSecondSend(ArrayList<User> list) {
+        firstFragment.updateFirstText(list);
     }
 
     void initViews(){
